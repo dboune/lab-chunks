@@ -1,0 +1,30 @@
+{
+  "name": "lab-chunks-repro",
+  "version": "1.0.0",
+  "description": "Repro for issue",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test-error": "lab --sourcemaps --transform node_modules/lab-transform-typescript -r console -o stdout -r html -o coverage.html",
+    "test": "lab --sourcemaps --transform node_modules/lab-transform-typescript -r console -o stdout -r lcov -o lcov.info",
+    "build": "tsc"
+  },
+  "main": "index.js",
+  "author": "Damian Bouné <dboune@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/code": "^4.0.3",
+    "@types/lab": "^11.1.0",
+    "@types/node": "^8.0.28",
+    "code": "^4.1.0",
+    "lab": "^14.3.0",
+    "lab-transform-typescript": "^3.0.1",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
